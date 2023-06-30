@@ -1,0 +1,38 @@
+<table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Cin</th>
+        <th scope="col">Code postal</th>
+        <th scope="col">RIB</th>
+        <th scope="col">Solde</th>
+    
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let compte of compte" >
+        <th >{{compte.id}}</th>
+        <td>{{compte.cin}}</td>
+   
+        <td >{{compte.code_postal}}</td>
+        <td>{{compte.RIB}}</td>
+        <td>{{compte.solde}}</td>
+        <td>  <div class="card-body">
+        
+            update client
+        
+       </div>  
+        
+        <button class="btn btn-danger" (click)="deleteCompte(compte.id)">
+          <i class="far fa-trash-alt"></i>
+        </button>
+     
+      
+      </td>
+      </tr>
+   
+      
+    
+    </tbody>
+  </table>

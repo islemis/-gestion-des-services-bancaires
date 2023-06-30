@@ -1,0 +1,44 @@
+<app-acceuil></app-acceuil>
+
+<div class="tablecontainer">
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">id compte</th>
+        <th scope="col">nombre de chéquiers</th>
+        <th scope="col">nombre de chéque</th>
+        <th scope="col">état de demande</th>
+     
+
+        <th scope="col">
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let demandechequier of demandechequiers" >
+        <th >{{demandechequier.id_dch}}</th>
+        <td>{{demandechequier.id_compte }}</td>
+   
+        <td >{{demandechequier.nbCheque}}</td>
+        <td >{{demandechequier.nb_chequier}}</td>
+        <td >{{demandechequier.etat}}</td>
+       
+
+        <td>  <div class="card-body">
+        
+          <button class="accept" (click)="  accepterdemandechequier(demandechequier,demandechequier.id_dch)"><i class="fas fa-check"></i> </button>
+          <button class="deny"  (click)="  refuserdemandechequier(demandechequier,demandechequier.id_dch)"><i class="fas fa-times"></i> </button>
+          <button class="supprimer" (click)="deletedemandechequier(demandechequier.id_dch)"><i class="fas fa-trash"></i> </button>
+        
+       </div>  
+        
+     
+      
+      </td>
+      </tr>
+   
+      
+    
+    </tbody>
+  </table>
+</div>

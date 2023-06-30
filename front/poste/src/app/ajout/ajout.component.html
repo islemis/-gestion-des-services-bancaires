@@ -1,0 +1,59 @@
+<body>
+<app-acceuil></app-acceuil>
+<div class="tablecontainer">
+  <div class="wrapper">
+    <div class="form">
+    <div class="inputfield">
+    <label>Nom</label>
+    <input type="text" class="input"  [(ngModel)]="Client.nom" placeholder="nom" ngModel required #a="ngModel" >
+             </div>  
+              <div class="inputfield">
+                <label>Prénom</label>
+                <input type="text" class="input" [(ngModel)]="Client.prenom" placeholder="prenom" ngModel required #b="ngModel" >
+             </div>  
+             <div class="inputfield">
+                <label>Cin</label>
+                <input type="text" class="input" [(ngModel)]="Client.cin" placeholder="cin" ngModel required #c="ngModel" >
+             </div>  
+            <div class="inputfield">
+                <label>Téléphone</label>
+                <input type="text" class="input" [(ngModel)]="Client.tel" placeholder="Téléphone" ngModel required #d="ngModel" >
+             </div> 
+             <div class="inputfield">
+              <label>Adresse</label>
+              <textarea class="textarea" [(ngModel)]="Client.adresse" placeholder="Adresse" ngModel required #e="ngModel" ></textarea>
+           </div> 
+           <div class="inputfield">
+            <label>Email </label>
+            <input type="email" class="input" [(ngModel)]="Client.email" placeholder="hello@gmail.com" ngModel required #f="ngModel" >
+         </div> 
+              <div class="inputfield">
+                <label>Sexe</label>
+                
+                <div class="custom_select">
+                  <div class="hello">
+                  <select [(ngModel)]="Client.sexe"  >
+                    <option value="">Sexe</option>
+
+                    <option value="Homme">Homme</option>
+                    <option value="femme" selected>Femme</option>
+                  </select>
+                </div>
+              </div>
+             </div> 
+             <div class="inputfield">
+              <label>Nom d'utilisateur</label>
+              <input type="text" class="input"  [(ngModel)]="Client.username" placeholder="nom" ngModel required #h="ngModel" >
+           </div>  
+           <div class="inputfield">
+            <label>Mot de passe</label>
+            <input type="password" class="input"  [(ngModel)]="Client.password" placeholder="classe" ngModel required #i="ngModel" >
+         </div>  
+            <div class="inputfield">
+              <input type="submit" value="Ajouter" class="btn" (click)="createClient()">
+            </div>
+          </div>
+        </div>
+</div>
+
+</body>

@@ -1,0 +1,57 @@
+<body>
+  <app-acceuil></app-acceuil>
+  <div class="tablecontainer">
+    <div class="wrapper">
+      <div class="form">
+      <div class="inputfield">
+      <label>Nom</label>
+      <input type="text" class="input"  [(ngModel)]="client.nom" placeholder="nom" autofocus >
+               </div>  
+                <div class="inputfield">
+                  <label>Prénom</label>
+                  <input type="text" class="input" [(ngModel)]="client.prenom" placeholder="prenom" autofocus >
+               </div>  
+               <div class="inputfield">
+                  <label>Cin</label>
+                  <input type="text" class="input" [(ngModel)]="client.cin" placeholder="cin" autofocus >
+               </div>  
+              <div class="inputfield">
+                  <label>Téléphone</label>
+                  <input type="text" class="input" [(ngModel)]="client.tel" placeholder="Téléphone" autofocus >
+               </div> 
+               <div class="inputfield">
+                <label>Adresse</label>
+                <textarea class="textarea" [(ngModel)]="client.adresse" placeholder="Adresse"  autofocus></textarea>
+             </div> 
+             <div class="inputfield">
+              <label>Email </label>
+              <input type="email" class="input" [(ngModel)]="client.email" placeholder="hello@gmail.com" autofocus >
+           </div> 
+                <div class="inputfield">
+                  <label>Sexe</label>
+                  
+                  <div class="custom_select">
+                    <div class="hello">
+                    <select [(ngModel)]="client.sexe"  >
+                      <option value="Homme">Homme</option>
+                      <option value="femme" selected>Femme</option>
+                    </select>
+                  </div>
+                </div>
+               </div> 
+               <div class="inputfield">
+                <label>username</label>
+                <input type="text" class="input"  [(ngModel)]="client.username" placeholder="nom" autofocus >
+             </div>  
+             <div class="inputfield">
+              <label>Password</label>
+              <input type="password" class="input"  [(ngModel)]="client.password" placeholder="classe"autofocus  >
+           </div>  
+              <div class="inputfield">
+                <input type="submit" value="modifier" class="btn" (click)="updateClient()">
+              </div>
+            </div>
+          </div>
+  </div>
+  
+  </body>

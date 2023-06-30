@@ -1,0 +1,39 @@
+<body>
+   <app-acceuil></app-acceuil>
+   <div class="tablecontainer">
+      <div class="wrapper">
+    
+         <div class="form">
+            <div class="inputfield">
+               <label>Numéro Cin du client</label>
+               <input type="text" class="input" [(ngModel)]="Compte.cin" placeholder="Numéro Cin du client" >
+               <small *ngIf="Compte.cin.invalid && (Compte.cin.dirty || Compte.cin.touched)">
+                  Le numéro de CIN doit être une chaîne de 8 chiffres.
+               </small>
+            </div>  
+            <div class="inputfield">
+               <label>code postal</label>
+               <input type="text" class="input" [(ngModel)]="Compte.code_postal" placeholder="code postal" >
+                
+            </div>  
+                
+         
+            <div class="inputfield">
+               <label>type</label>
+               <select [(ngModel)]="Compte.type" >
+                  <option value="">Choisissez un type de compte</option>
+                  <option value="épargne">épargne</option>
+                  <option value="courant">courant</option>
+                </select>
+            </div>  
+       
+        
+        
+        
+           <div class="inputfield">
+             <input type="submit" value="Ajouter" class="btn" (click)="createCompte()" >
+           </div>
+         </div>
+       </div>
+   </div>
+</body>

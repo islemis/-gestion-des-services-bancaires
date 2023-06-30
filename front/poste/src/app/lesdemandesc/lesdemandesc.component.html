@@ -1,0 +1,29 @@
+<app-acceuil></app-acceuil>
+<div class="tablecontainer">
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">id compte</th>
+        <th scope="col">type de carte</th>
+        <th scope="col">état de demande</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let demandecarte of demandecarte" >
+        <th >{{demandecarte.id_dec}}</th>
+        <td>{{demandecarte.id_compte }}</td>
+        <td >{{demandecarte.type}}</td>
+        <td>{{demandecarte.etat}}</td>
+        <td>
+          <div class="card-body">
+            <button class="accept" (click)="accepterdemandecarte(demandecarte,demandecarte.id_dec)"><i class="fas fa-check"></i> </button>
+            <button class="deny" (click)="refuserdemandecarte(demandecarte,demandecarte.id_dec)"><i class="fas fa-times"></i> </button>
+            <button class="supprimer" (click)="deletedemandecarte(demandecarte.id_dec)"><i class="fas fa-trash"></i> </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

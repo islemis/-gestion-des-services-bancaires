@@ -1,0 +1,31 @@
+.row{
+    margin: 0;
+    margin-left: 0px !important;
+  margin-right: 0px !important;
+  }
+
+  th{
+    border-collapse: collapse !important;
+    border: 3px solid rgb(117, 112, 112) !important;
+    background-color:#f5efd4ec !important;
+  }
+  td{
+    border-collapse: collapse !important;
+    border: 3px solid rgb(117, 112, 112) !important;
+  }
+  table {
+    width: 80% !important;
+    margin-left: 20%;
+    margin-top: 100px !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+  }
+
+ 
+  
+  body {
+    background-color:  #003366 !important;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
